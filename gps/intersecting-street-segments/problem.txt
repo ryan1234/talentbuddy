@@ -1,0 +1,28 @@
+Challenge: Intersecting street segments
+As in the previous challenge, a street segment is a part of the street between two consecutive junctions and is described by the coordinates of the two junctions. Two segments intersect if they have a common junction.
+
+In the image below the navigation software needs to determine the actual position of the car on the street segments. This is difficult in the case of the last position received from the GPS sattelite.
+
+By knowing which segments intersect with the segment the car is currently on, the decision is easier to make. The car can only continue onto intersecting segments, so in the case pictured above it would be wrong to match it on the parallel segment.
+
+Given a set of street segments in a city
+Your task is to
+write a function that finds the number of segments each segment intersects with
+for each segment given as input your function will print to standard output(stdout) on a separate line the number of segments it intersects with
+Note that your function will receive the following arguments:
+segments
+which is an array of strings with the following format: "x1,y1,x2,y2" where (x1, y1) and (x2,y2) are the coordinates that define a street segment
+Data constraints
+the number of segments given as input will not exceed 100,000
+all coordinates are integer numbers
+Efficiency constraints
+your function is expected to print the result in less than 2 seconds
+Example
+Input	Output
+segments: "1,1,2,5", "1,1,5,4", "5,4,6,1", "6,1,1,1", "2,5,5,4"
+3
+4
+3
+3
+3
+

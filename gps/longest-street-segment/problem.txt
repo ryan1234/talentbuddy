@@ -1,0 +1,22 @@
+Challenge: Longest street segment
+A point on a map is a pair of two values: X (longitude) and Y (latitude).
+A junction is the intersection of at least two streets (M and N in the image below).
+A street segment is a part of the street between two consecutive junctions and is described by the coordinates of the two junctions (A and B are 2 of the 7 segments in the image below)
+
+Given a set of street segments in a city
+Your task is to
+write a function that finds the longest street segment in the city and prints its length to standard output (stdout). If the length is a float number, print it with only 2 decimals.
+Note that your function will receive the following arguments:
+segments
+which is an array of strings with the following format: "x1,y1,x2,y2" where (x1, y1) and (x2,y2) are the coordinates that define a street segment
+Data constraints
+the number of segments given as input will not exceed 100,000
+all coordinates are integer numbers
+Efficiency constraints
+your function is expected to print the result in less than 2 seconds
+Example
+Input	Output
+segments: "1,1,2,5", "1,1,5,4", "5,4,6,1", "6,1,1,1", "2,5,5,4"
+5.00
+Explanation
+The 2nd and the 4th street segments have both the highest length: 5.00

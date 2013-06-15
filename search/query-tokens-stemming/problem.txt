@@ -1,0 +1,28 @@
+Challenge: Query tokens stemming
+Stemming removes word suffixes to reduce inflected (or sometimes derived) words to their base or root form.
+E.g. “friendly” is an inflection of “friend”. By stemming (in this case stemming means removing the suffix “ly”), “friendly” is reduced to “friend”.
+Given a list of tokens and a list of suffixes
+Your task is to
+write a function that prints to the standard output (stdout) all the tokens having their suffix removed if found in the list of suffixes (please print one token per line)
+for each token if there is more than one suffix that can be removed please choose the one that is the longest
+Note that your function will receive the following arguments:
+tokens
+which is an array of strings giving the tokens described above
+suffixes
+which is an array of strings giving the suffixes described above
+Data constraints
+the length of the tokens array will not exceed 1000
+the length of the suffixes array will not exceed 100
+all string comparisons are case-sensitive (i.e: Cool != cool)
+Efficiency constraints
+your function is expected to print the requested result and return in less than 2 seconds
+Example
+Input	Output
+query: "friendly", "outgoing", "powerful", "in"
+suffixes: "ing", "ly", "ul", "ful"
+friend
+outgo
+power
+in
+Explanation
+For the word “powerful” we can remove either suffix “ul” or “ful”, but we choose the latter because it’s the longest one.

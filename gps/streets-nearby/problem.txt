@@ -1,0 +1,26 @@
+Challenge: Streets nearby
+A GPS position that we receive from the satellite is always going to have an error threshold, which we define as the radius of a circle around this position where our actual position can be. Let’s call this circle the approximation circle.
+
+For a car that means that its real position is on one of the street segments inside the circle.
+Given a set of street segments in a city and a set of approximation circles
+Your task is to
+write a function that finds the number of street segments intersected by each approximation circle given as input and prints this number to standard output (stdout) on each line for every circle. Note that a segment may be completely contained in the circle.
+Your function will receive the following arguments:
+segments
+which is an array of strings with the following format: "x1,y1,x2,y2" where (x1, y1) and (x2,y2) are the coordinates that define a street segment
+circles
+which is an array of strings with the following format: “x,y,e” where (x, y) are the coordinates of the center of the approximation circle and e is its radius (the error threshold)
+Data constraints
+the number of street segments given as input will not exceed 1,000
+the number of approximation circles given as input will not exceed 1,000
+Efficiency constraints
+your function is expected to print the result in less than 2 seconds
+Bonus
+want to challenge your mind further? This challenge can be solved by algorithms that produce a correct output in less than 2 seconds for inputs consisting of 100,000 street segments and 100,000 circles.
+Example
+Input	Output
+segments: "0,2,2,2", "2,0,2,2", "2,2,2,5", "2,2,6,6"
+circles: "3,4,1.5"
+2
+Explanation
+The circle intersects with the last 2 segments given

@@ -1,0 +1,24 @@
+Challenge: Basic search query
+It's time to retrieve the web pages that match a user query.
+Given a query as a list of tokens and a list of strings representing the content of each web page
+Your task is to
+write a function that prints to the standard output (stdout) the number of web pages that contain all the given tokens in the same order.
+Note that your function will receive the following arguments:
+query
+which is an array of strings giving the tokens in the user query
+pages
+which is an array of strings giving the content of each web page
+Data constraints
+the length of the query array will not exceed 10
+the length of the pages array will not exceed 1000
+the length of any web page content will not exceed 1000
+all string comparisons are case-sensitive (i.e: Cool != cool)
+Efficiency constraints
+your function is expected to print the requested result and return in less than 2 seconds
+Example
+Input	Output
+query: "the", "new", "store"
+pages: "the new store is in san francisco", "the boy enters a new and cool store", "this boy enters a new store", "The new store is in the city", "the newstore is a brand", "there is newton in the store"
+4
+Explanation
+Only the 1st, 2nd, 5th and 6th web pages contain all tokens in the given order.

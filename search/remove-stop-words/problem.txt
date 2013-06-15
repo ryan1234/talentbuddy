@@ -1,0 +1,24 @@
+Challenge: Remove stop words
+Stop words are tokens which are filtered out from queries because they add little value in finding relevant web pages.
+Given a list of tokens that were obtained after the search engine tokenized the user query using your code from the previous task and a list of stopwords
+Your task is to
+write a function that prints to the standard output (stdout) all the tokens in the user query that are not stop words (one per line)
+Note that your function will receive the following arguments:
+query
+which is an array of strings giving the tokens in the user query
+stopwords
+which is an array of strings giving the stop words
+Data constraints
+the length of the query array will not exceed 1000
+the length of the stopwords array will not exceed 1000
+all string comparisons are case-sensitive (i.e: Cool != cool)
+Efficiency constraints
+your function is expected to print the requested result and return in less than 2 seconds
+Example
+Input	Output
+query: “the”, “new”, “store”, “in”, “SF”
+stopwords: “the”, “in”
+new
+store
+SF
+

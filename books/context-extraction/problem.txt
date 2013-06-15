@@ -1,0 +1,36 @@
+Challenge: Context extraction
+Considering the name of a book and the tweet mentioning it we define the context of the book as a sequence of tokens immediately preceding and immediately following the book name in the tweet.
+A token is defined as a sequence of characters that occur between white spaces.
+The size of the context is W tokens on each side (preceding and following the book name)
+For example, having the book title "Beautiful Code", W=2 and the following tweet
+"I read Beautiful Code and it was simply amazing"
+the context is "I read -TITLE- and it"
+Given a list of book titles, a list of tweets and W
+Your task is to
+write a function that prints to the standard output (stdout) for each book all the contexts that can be extracted from the list of tweets (one per line in the same order with the tweets that generated those contexts)
+each context must be printed as a string formed by concatenating the tokens preceding the book title, the keyword "-TITLE-" (one white space on both sides) and the tokens following the book title
+please take into consideration the following constraints:
+A book title matches a tweet if all its tokens match a sequence of consecutive tokens in the tweet (e.g. "Beautiful Code" does not match "Beautiful A Code")
+If the number of available tokens preceding or following a book title is lower than W extract only those available.
+If a context is empty on both the left and the right side it must be ignored, otherwise it is considered valid
+Note that your function will receive the following arguments:
+books
+which is an array of strings representing the book titles
+tweets
+which is an array of strings representing the tweets
+w
+which is an integer number as described above
+Data constraints
+the length of the books array will not exceed 50
+the length of the tweets array will not exceed 10000
+Efficiency constraints
+your function is expected to print the requested result and return in less than 2 seconds
+Example
+Input	Output
+books: "Up and Running", "HTML5 Cookbook"
+tweets: "Did you read Up and Running ?", "Looking forward to the HTML5 Cookbook release", "Is Up and running of any good?", "Up and Running ,best book ever"
+w: 3
+Did you read -TITLE- ?
+-TITLE- ,best book ever
+forward to the -TITLE- release
+

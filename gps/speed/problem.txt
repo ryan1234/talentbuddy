@@ -1,0 +1,21 @@
+Challenge: Speed
+Speed is an important decision factor when matching GPS positions on the streets. For example - if you’re driving at high speed through a junction, chances are you’re continuing straight ahead.
+Given a set of coordinates and corresponding timestamps
+Your task is to
+write a function that computes the velocity of the car in each of the points given as input (except the first one)
+your function is expected to prints each computed velocity on a separate line to standard output (stdout) with a precision of 2 decimals
+Note that your function will receive the following arguments:
+positions
+which is an array of strings with the following format: “x1,y1,ts” where (x1, y1) represent the position of the car at timestamp ts
+Data constraints
+the number of positions will not exceed 1,000
+the timestamps are given as unix timestamps, measured in seconds
+Efficiency constraints
+your function is expected to print the result in less than 2 seconds
+Example
+Input	Output
+positions: "1,1,10", "3,1,20", "4,1,30", "4,4,35"
+0.20
+0.10
+0.60
+

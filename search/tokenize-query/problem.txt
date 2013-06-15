@@ -1,0 +1,25 @@
+Challenge: Tokenize query
+As soon as a user inputs a query, the search engine must tokenize it - that means break it down into understandable tokens. A token is defined as a sequence of characters separated by white spaces and/or punctuation.
+Given a string representing a user query and a set of punctuation characters
+Your task is to
+write a function that prints to the standard output (stdout) all the tokens in the user query (one per line)
+Note that your function will receive the following arguments:
+query
+which is a string giving the user query
+punctuation
+which is a string giving the punctuation characters that separate tokens
+Data constraints
+the size of the query string will not exceed 1000 characters
+the size of the punctuation string will not exceed 10 characters
+Efficiency constraints
+your function is expected to print the requested result and return in less than 2 seconds
+Example
+Input	Output
+query: "car? dealers! bmw, audi"
+punctuation: "?!"
+car
+dealers
+bmw,
+audi
+Explanation
+The given punctuation characters above are question mark (?), exclamation mark (!)
