@@ -1,0 +1,28 @@
+Challenge: Fast power
+Searching for a string in a large data store by simply comparing characters would take ages or a huge amount of computing power. We need a way to do it fast!
+The first step to building a fast search algorithm is to encode the data in a format that makes search efficient.
+A critical operation in the encoding process which we’ll get familiar with a bit later is the exponentiation of integer numbers.
+Given a list of pairs of integers (a,b)
+Your task is to
+write a function that prints to the standard output (stdout) for each pair the result of (ab) modulo 4211 (one per line)
+Note that your function will receive the following arguments:
+a
+which is an array of integers giving the first element (a) of each pair
+b
+which is an array of integers giving the second element (b) of each pair
+The ith pair is defined by a[i] and b[i].
+Data constraints
+the length of a, b arrays will not exceed 10000
+elements of a, b arrays are integer numbers in the [0, 50000]
+Efficiency constraints
+your function is expected to print the requested result and return in less than 2 seconds
+make sure you don't use any methods that do significant work for you (e.g. pow() in Python)
+Example
+Input	Output
+a: 41619, 169, 29227, 13232
+b: 6, 5, 7, 8
+3226
+3461
+2507
+2597
+

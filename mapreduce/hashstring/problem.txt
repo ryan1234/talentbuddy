@@ -1,0 +1,26 @@
+Challenge: Hash String
+Now let’s solve the problem of encoding. As we mentioned previously, searching by simply comparing characters takes ages - so how can we speed up those comparisons?
+Comparisons can be conducted faster if do them on numbers rather than characters. So, we’ll just represent the characters as numbers and compare them as if they’re numbers.
+During this challenge you’ll implement a way to encode (i.e: hashing) the characters into numbers.
+Consider the string S = s0s1s2..sm-1, we define the hash value of S in the following way:
+hash(S) = (a0 * 10m-1 + a1 * 10m-2 + … am-1 * 100) modulo 104677
+where ai is the ASCII value of character si in the given string.
+Given two strings S and T
+Your task is to
+write a function that prints to the standard output (stdout) how many substrings from T have the same length with S and also the same hash value
+a substring is a sequence of consecutive characters from a given string
+Note that your function will receive the following arguments:
+s
+which is the string "S" described above
+t
+which is the string "T" described above
+Data constraints
+the size of the S and T strings will not exceed 200,000 characters
+Efficiency constraints
+your function is expected to print the requested result and return in less than 2 seconds
+Example
+Input	Output
+s: "ab"
+t: "cab bac abab"
+3
+
