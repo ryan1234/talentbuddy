@@ -1,0 +1,30 @@
+Challenge: Mapper
+To further increase the speed of the search algorithm, the entire set of documents and search strings is split into small chunks and sent to multiple machines.
+
+
+During this phase, every machine solves parts of our larger search problem and delivers the results for synthesis to the Reducer.
+Given a list of search strings and a list of strings representing the content of the documents
+Your task is to
+write a function that prints to the standard output (stdout) the list of documents matched by each of the search strings
+for the list of matched documents you have to print the position of the document in the initial list (the first document has position 0)
+for a given search string all positions of matched documents must be printed on the same line separated by a white space
+if one string is not found in any of the documents please print -1
+Note that your function will receive the following arguments:
+searchStrings
+which is an array containing the strings that need to be searched for
+docs
+which is an array of strings representing the content of the documents
+Data constraints
+the size of any string from the searchStrings and docs array will not exceed 200,000 characters
+the size of the searchStrings and docs arrays will not exceed 1000 elements
+all string comparisons are case-sensitive
+Efficiency constraints
+your function is expected to print the requested result and return in less than 2 seconds
+Example
+Input	Output
+searchStrings: "buddy", "code", talent"
+docs: "Hello, buddy!", "Do you have talent? Who's your buddy?"
+0 1
+-1
+1
+

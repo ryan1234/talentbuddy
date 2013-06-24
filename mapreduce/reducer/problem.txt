@@ -1,0 +1,26 @@
+Challenge: Reducer
+As you remember, the mappers previously produced key-value pairs of data - the key was the string we were searching for and the value was a list of matched documents.
+
+
+We are now entering the Reducer phase of the MapReduce. Each reducer will receive the lists of matched documents produced by all mappers for a given string.
+Our task is to simply merge the given lists of documents.
+Given an array containing lists of sorted document IDs
+Your task is to
+write a function that prints to the standard output (stdout) the sorted document IDs obtained after merging the given lists
+all IDs in the merged list must be unique
+Note that your function will receive the following arguments:
+docIds
+which is an array of strings
+each string contains a list of sorted document IDs separated by comma
+Data constraints
+all document IDs are integer numbers
+each string in the docIds array will contain at most 100,000 IDs
+the length of the docIds array will not exceed 1000 elements
+Efficiency constraints
+your function is expected to print the requested result and return in less than 2 seconds
+expected complexity: O(N * logK), N = total number of IDs in all lists, K = total number of lists
+Example
+Input	Output
+docIds: "1,2,3", "2,3", "2,5"
+1 2 3 5
+
