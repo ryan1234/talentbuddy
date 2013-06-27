@@ -1,0 +1,38 @@
+Challenge: Context pruning
+You’ve obtained the set of trigger words, congrats!
+It’s time to remove the tokens that are not useful in predicting a book title in their vicinity from each context. This operation is called pruning.
+Pruning each context is done in the following fashion:
+select the token which is a trigger word and has the highest IDF (inverse document frequency)
+if none of the tokens is a trigger word then ignore the context
+if the token is on the left side of the context
+we keep the token and all tokens on its right
+for the right side of the context we keep only the first token (if exists)
+if the token is on the right side of the context
+we keep the token and all tokens on its left
+for the left side of the context we keep only the last token (if exists)
+Considering the list of trigger words [“Kindle”, “read”] sorted in ascending order by their IDF, pruning the context: Did you read -TITLE- on Kindle yesterday? will produce the following result:
+read -TITLE- on
+Given a list of contexts and a list of trigger words sorted in ascending order by IDF
+Your task is to
+write a function that prunes the contexts and prints the results to the standard output (stdout)
+Note that your function will receive the following arguments:
+contexts
+which is an array of strings giving a list of contexts
+each context is a string of tokens containing the keyword "-TITLE-" (separated by spaces) which delimits the left side of the context and the right side of it
+triggers
+which is an array of strings representing trigger words sorted in ascending order by IDF
+Data constraints
+the length of the contexts array will not exceed 1000
+the length of a context string will not exceed 1000 characters
+the length of the triggers array will not exceed 1000
+the length of a trigger word will not exceed 100 characters
+Efficiency constraints
+your function is expected to print the requested result and return in less than 2 seconds
+Example
+Input	Output
+contexts: "to read -TITLE- while in", "to buy -TITLE- while in school", "buy -TITLE-"
+triggers: "read", "school"
+read -TITLE- while
+buy -TITLE- while in school
+Explanation
+The last context is ignored because it doesn't contain any trigger words
