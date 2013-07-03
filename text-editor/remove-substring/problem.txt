@@ -1,0 +1,23 @@
+Challenge: Remove substring
+Another common operation is deleting characters starting from the position of our cursor in the editor.
+Given a string S, a position in this string P and a number N
+Your task is to
+write a function that deletes N characters from the string S, starting from position P
+your function must print the newly formed string to standard output (stdout)
+Note that your function will receive the following arguments:
+s
+which is the string from which we must delete the specified characters
+p
+which is the position in the string from which we must start deleting characters
+n
+which is the number of characters that must be deleted
+Data constraints
+the string will contain at most 1000 characters
+Example
+Input	Output
+s: "abcdefghi"
+p: 4
+n: 3
+abcghi
+Explanation
+The fourth character in the string is "d". Starting from this character, we delete 3 consecutive characters: "def", so the string that remains is: "abcghi".

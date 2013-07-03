@@ -1,0 +1,18 @@
+Challenge: Sort words
+Some advanced code editors allow programmers to sort the words from a selected block of text. This is useful when we are polishing our code to make sure everything is readable and consistent.
+Let’s define a word as any number of characters separated by spaces and commas. For example the string " one, ,two three,4," contains 4 words.
+Given a string S
+Your task is to
+write a function that sorts all the words in the string alphabetically and prints them to standard output (stdout) in sorted order, one on each line
+Note that your function will receive the following arguments:
+s
+which is the string from which you must extract and sort the words
+Data constraints
+the string will contain at most 1000 characters
+Example
+Input	Output
+s: " one, ,two three,4,"
+4
+one
+three
+two

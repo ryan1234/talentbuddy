@@ -1,0 +1,20 @@
+Challenge: Copy-Paste
+When writing text we frequently use the copy and paste commands. Let’s see how an editor implements the paste command.
+Given two strings S1 and S2 and an integer number P
+Your task is to
+write a function that inserts S2 into S1 starting with the position P in S1 and then prints the newly formed string S1 to standard output (stdout)
+Note that your function will receive the following arguments:
+s1
+which is the string in which we must make the insertion
+s2
+which is the string that needs to be inserted
+p
+which is the position in s1 where s2 must be inserted
+Data constraints
+the strings will contain at most 1000 characters
+Example
+Input	Output
+s1: "abcdefghi"
+s2: "xyz"
+p: 3
+abcxyzdefghi

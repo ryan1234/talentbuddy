@@ -1,0 +1,34 @@
+Challenge: Extract book titles
+In the previous challenge we have implemented context pruning and obtained high-precision contexts. These contexts have a high probability of identifying book titles.
+Having a high-precision context
+read -TITLE- on
+and a tweet
+“I’ve just read Design Patterns: Elements of Reusable Object-Oriented Software on my new Kindle!”
+we can induce that Design Patterns: Elements of Reusable Object-Oriented Software is the name of a book because it is surrounded by the left side and the right side of a high-precision context.
+Given a list of contexts sorted in decreasing order by their precision and a list of tweets
+Your task is to
+write a function that prints to the standard output (stdout) all book titles extracted from the tweets using the given contexts
+please print one unique book title per line sorted in lexicographical order (alphabet order)
+if a tweet matches multiple contexts please use only the one with the highest precision to extract the book title
+If the same context matches a tweet multiple times, please pick the first match from left to right
+Note that your function will receive the following arguments:
+contexts
+which is an array of strings giving a list of contexts
+each context is a string of tokens containing the keyword "-TITLE-" (separated by spaces) which delimits the left side of the context and the right side of it
+tweets
+which is an array of strings representing tweets
+Data constraints
+the length of the contexts array will not exceed 1000
+the length of a context string will not exceed 1000 characters
+the length of the tweets array will not exceed 1000
+the length of a tweet string will not exceed 140 characters
+all string comparisons are case-sensitive
+Efficiency constraints
+your function is expected to print the requested result and return in less than 2 seconds
+Example
+Input	Output
+contexts: "read -TITLE- on Kindle", "read -TITLE- ", "-TITLE- is a good reading"
+tweets: "I've just read Beautiful Code", "Yay! I've read The Old Man and the Sea on Kindle", "Thinking, Fast and Slow is a good reading"
+Beautiful Code
+The Old Man and the Sea
+Thinking, Fast and Slow

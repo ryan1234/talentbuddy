@@ -1,0 +1,15 @@
+Challenge: Count words
+When writing an essay it is useful to know the total number of words that we have typed.
+Let's define a word as any number of characters separated by spaces and commas. For example the string " one, ,two three,4," contains 4 words.
+Given a string S
+Your task is to
+write a function that counts the number of words in the given string and prints this number to standard output (stdout)
+Note that your function will receive the following arguments:
+s
+which is the string for which you must count the number of words
+Data constraints
+the string will contain at most 1000 characters
+Example
+Input	Output
+s: " one, ,two three,4,"
+4
